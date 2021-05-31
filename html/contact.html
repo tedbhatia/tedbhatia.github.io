@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1>Tejas Bhatia / Software Dev & ML Enthusiast</h1>
+            <nav>
+                <ul>
+                <li class="nav__links"><a href="../index.html">Home</a></li>
+                <li class="nav__links"><a href="./about.html">About</a></li>              
+                <li class="nav__links"><a href="./projects.html">Projects</a></li>
+                <li class="nav__links"><a href="./skills.html">Skills</a></li>
+                <li class="nav__links"><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <script type="text/JavaScript">
+            window.addEventListener("scroll" ,function() {
+            let header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+            });
+        </script>
+        
+        <p>
+            Contact Details here
+        </p>
+
+    </body>
+
+</html>

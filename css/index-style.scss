@@ -20,6 +20,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
   font-weight: 300;
+  height: 130vh;
 }
 body ::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -61,7 +62,7 @@ body :-ms-input-placeholder {
   max-width: 600px;
   margin: 0 auto;
   padding: 10rem 0;
-  height: 628px;
+  height: 100vh;
   text-align: center;
 }
 .container h1 {
@@ -80,7 +81,35 @@ body :-ms-input-placeholder {
             transition-timing-function: ease-in-put;
     font-weight: 200;
   }
-
+.footer-container {
+    width: 100%;
+    background-color: #ebedf3;
+    height: 30vh;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 100vh;
+  }
+.footer-container h1 {
+    font-size: 50px;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    -webkit-transition-timing-function: ease-in-put;
+            transition-timing-function: ease-in-put;
+    font-weight: 200;
+    color: black;
+}
+.footer-container h2 {
+  font-size: 25px;
+  padding-left: 10%;
+  padding-right: 10%;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-put;
+          transition-timing-function: ease-in-put;
+  font-weight: 200;
+  color: black;
+}
 .bg-bubbles {
   position: absolute;
   top: 0;

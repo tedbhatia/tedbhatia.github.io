@@ -106,13 +106,60 @@
     </ul>
 </div>
 <div class="about-container" id="about">
+    <style>
+        .segment {
+            min-height: auto;
+            border: 1px solid #50a3a2;
+            border-radius: 5px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+        .leftpane {
+            width: 30%;
+            height: 60vh;
+            float: left;
+            border-collapse: collapse;
+        }
+        .rightpane {
+            width: 65%;
+            height: 60vh;
+            position: relative;
+            float: right;
+            border-collapse: collapse;
+        }
+        .circular--portrait {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+            left: 85vh
+        }
+        .circular--portrait img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
     <br>
     <h1>About</h1>
-    <br><br>
-    <h2>1. Photos</h2>
-    <h2>2. Paragraph about yourself</h2>
-    <h2>3. Education</h2>
-    <h2>4. Work ex</h2>
+    <br>
+    <div class="segment circular--portrait">
+        <img src="images/test.jpeg" />
+    </div>
+    <br>
+    <div class="segment leftpane">
+        <h2>2. Paragraph about yourself</h2>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+    </div>
+    <div class="segment rightpane">
+        <h2>3. Education</h2>
+        <h2>4. Work ex</h2>
+    </div>
 </div>
 <div class="projects-container" id="projects">
     <br>
@@ -203,6 +250,29 @@
             <hr>
             <h4>Languages</h4>
             <h4>Last Updated</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h2>certification_1</h2>
+            <h3>The professional certification_1. The certification does blah blah blah</h3>
+            <a href="#" class="fa font-info2 fa-certificate"></a>
+            <hr>
+            <h4>License</h4>
+            <h4>Validity</h4>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+            <h2>certification_2</h2>
+            <h3>The professional certification_2. The certification does blah blah blah</h3>
+            <a href="#" class="fa font-info2 fa-certificate"></a>
+            <hr>
+            <h4>License</h4>
+            <h4>Validity</h4>
         </div>
       </div>
     </div>

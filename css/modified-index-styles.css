@@ -6,6 +6,7 @@ html {
 	height: 100%;
 }
 
+/* Variable properties depending on screen sized */
 @media only screen and (max-width: 576px) {
 	.padding-sm-xs-screens {
 		padding-top: 16px;
@@ -123,6 +124,7 @@ html {
 	}
 }
 
+/* CSS properties for index section */
 .wrapper {
   background: #50a3a2;
   background: -webkit-gradient(linear, left top, right bottom, from(#50a3a2), to(#53e3a6));
@@ -179,6 +181,7 @@ html {
 	color: #FFF;
 }
 
+/* Copied CSS properties for animated boxes. Animated boxes are disabled for the time being */
 .bg-bubbles {
   position: absolute;
   top: 0;
@@ -287,6 +290,7 @@ html {
   }
 }
 
+/* CSS properties for the about-me section */
 .about-container {
   background-color: #edeff3;
   min-height: 100%;
@@ -311,6 +315,7 @@ font-weight: 200;
 color: black;
 }
 
+/* CSS properties for the projects section */
 .projects-container {
   background-color: #e9ebf1;
   height: 100%;
@@ -319,6 +324,9 @@ color: black;
   overflow-y: auto;
 }
 
+/* CSS properties for the hidden scrollbar. This is done in order to remove the obviousness of the scrollbar 
+ *  indicating the more content is present. Also, helps us reduce the number of visible, yet unnecessary, scrollbars in the document
+ */
 .hidden-scrollbar::-webkit-scrollbar {
 	display: none;
 }
@@ -327,7 +335,7 @@ color: black;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
-
+/* CSS properties for the "get in touch" section */
 .footer-container {
     background-color: #d7dbe9;
     text-align: center;

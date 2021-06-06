@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tejas Bhatia - Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/modified-index-styles.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+<body onload="computeNavbarHeight()" onresize="computeNavbarHeight()">
+
+<!-- Make a collapseable navbar which preserves a top-menu styling for larger screens, and converts to a collapsable menu for small screens -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="position: sticky; position: -webkit-sticky; width: 100%; top: 0; z-index: 2">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" id="home" href="#index" onclick="selectActiveNavLink('home', 'index')">Home
+          </a>
+        </li>
+        <li class="nav-item show-md">
+		  <a class="nav-link" id="aboutMe" href="#about" onclick="selectActiveNavLink('aboutMe', 'about')">About Me</a>
+        </li>
+		<li class="nav-item dropdown show-sm-xs">
+		  <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" aria-expanded="false" onclick="selectActiveNavLink('navbardrop', 'about')">
+			About Me
+		  </a>
+		  <div class="dropdown-menu">
+			<a class="dropdown-item" href="#bio">Bio</a>
+			<a class="dropdown-item" href="#timeline">Timeline</a>
+		  </div>
+		</li>
+        <li class="nav-item">
+		  <a class="nav-link" id="projAndCerts" href="#projects" onclick="selectActiveNavLink('projAndCerts', 'projects')">Projects & Certifications</a>
+        </li>
+        <li class="nav-item">
+		  <a class="nav-link" id="skills" href="#skill-set" onclick="selectActiveNavLink('skills', 'skill-set')">Skills</a>
+        </li>
+		<li class="nav-item">
+		  <a class="nav-link" id="contact" href="#contact-me" onclick="selectActiveNavLink('contact', 'contact-me')">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- The top most container for the content of the page, right below the navbar -->
+<div class="topmost-container">
+<!-- container for the index/home section -->
+<div class="container-fluid full-screen-height wrapper" id="index">
+	<div class="bio-container">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            .fa {
+                text-align: center;
+                text-decoration: none;
+                margin: 0 2px;
+            }
+
+            .font-info {
+                font-size: 50px;
+                width: 50px;
+                color: white;
+            }
+
+            .fa-github {
+                font-size: 50px;
+            }
+
+            .fa-linkedin {
+            color: white;
+            }
+
+            .fa-twitter {
+            color: white;
+            }
+
+            a {
+            padding: auto auto;
+            position: relative;
+            z-index: 1;
+            }
+        </style>
+        <h1>Tejas Bhatia</h1>
+        <h2>One line description about yourself; your goal</h2>
+        <br><br>
+        <a href="#about" class="transparent_btn">More About Me </a>
+        <br><br>
+        <a href="https://github.com/tedbhatia" class="fa font-info fa-github"></a>
+        <a href="https://www.linkedin.com/in/tejas-bhatia/" class="fa font-info fa-linkedin"></a>
+        <a href="https://twitter.com/techted6" class="fa font-info fa-twitter"></a>
+    </div>
+	<!-- Commenting out the animated boxes in the home section. Can be reintroduced with minor CSS tweaks -->
+	<ul class="bg-bubbles">
+		<!--<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>-->
+    </ul>
+</div>
+<!-- container for the about/bio section -->
+<div class="container-fluid full-screen-height about-container" id="about">
+  <style>
+        .circular--portrait {
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+			max-width: 200px;
+			width: 200px;
+			z-index: 0;
+        }
+        .circular--portrait img {
+            width: 100%;
+            height: auto;
+        }
+        .scroll {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+		.portrait-div {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			height: 200px;
+			max-height: 200px;
+		}
+    </style>
+    <br>
+    <h1>About</h1>
+    <br>
+	<div class="portrait-div" id="bio">
+		<div class="circular--portrait">
+			<img src="images/test.jpeg" />
+		</div>
+	</div>
+    <br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-4">
+				<div class="scroll leftpane hidden-scrollbar">
+					<h1>Bio</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-8 padding-sm-xs-screens">
+				<div class="scroll rightpane hidden-scrollbar" id="timeline">
+					<style>
+						.timeline {
+						position: relative;
+						width: 100%;
+						max-width: 1140px;
+						margin: 0 auto;
+						padding: 15px 0;
+						}
+
+						.timeline::after {
+						content: '';
+						position: absolute;
+						width: 2px;
+						background: #006E51;
+						top: 0;
+						bottom: 0;
+						left: 50%;
+						margin-left: -1px;
+						}
+
+						.container-tl {
+						padding: 15px 30px;
+						position: relative;
+						background: inherit;
+						width: 50%;
+						}
+
+						.container-tl.left {
+						left: 0;
+						}
+
+						.container-tl.right {
+						left: 50%;
+						}
+
+						.container-tl::after {
+						content: '';
+						position: absolute;
+						width: 16px;
+						height: 16px;
+						top: calc(50% - 8px);
+						right: -8px;
+						background: #ffffff;
+						border: 2px solid #006E51;
+						border-radius: 16px;
+						z-index: 1;
+						}
+
+						.container-tl.right::after {
+						left: -8px;
+						}
+
+						.container-tl::before {
+						content: '';
+						position: absolute;
+						width: 50px;
+						height: 2px;
+						top: calc(50% - 1px);
+						right: 8px;
+						background: #006E51;
+						z-index: 1;
+						}
+
+						.container-tl.right::before {
+						left: 8px;
+						}
+
+						.container-tl .date {
+						position: absolute;
+						display: inline-block;
+						top: calc(50% - 8px);
+						text-align: center;
+						font-size: 14px;
+						font-weight: bold;
+						color: #006E51;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+						z-index: 1;
+						}
+
+						.container-tl.left .date {
+						right: -75px;
+						}
+
+						.container-tl.right .date {
+						left: -75px;
+						}
+
+						.container-tl .icon {
+						position: absolute;
+						display: inline-block;
+						width: 40px;
+						height: 40px;
+						padding: 9px 0;
+						top: calc(50% - 20px);
+						background: #F6D155;
+						border: 2px solid #006E51;
+						border-radius: 40px;
+						text-align: center;
+						font-size: 18px;
+						color: #006E51;
+						z-index: 1;
+						}
+
+						.container-tl.left .icon {
+						right: 56px;
+						}
+
+						.container-tl.right .icon {
+						left: 56px;
+						}
+
+						.container-tl .content {
+						padding: 30px 90px 30px 30px;
+						background: #F6D155;
+						position: relative;
+						border-radius: 0 500px 500px 0;
+						}
+
+						.container-tl.right .content {
+						padding: 30px 30px 30px 90px;
+						border-radius: 500px 0 0 500px;
+						}
+
+						.container-tl .content h2 {
+						margin: 0 0 10px 0;
+						font-size: 18px;
+						font-weight: normal;
+						color: #006E51;
+						}
+
+						.container-tl .content p {
+						margin: 0;
+						font-size: 16px;
+						line-height: 22px;
+						color: #000000;
+						}
+
+						@media (max-width: 767.98px) {
+						.timeline::after {
+							left: 90px;
+						}
+
+						.container-tl {
+							width: 100%;
+							padding-left: 120px;
+							padding-right: 30px;
+						}
+
+						.container-tl.right {
+							left: 0%;
+						}
+
+						.container-tl.left::after, 
+						.container-tl.right::after {
+							left: 82px;
+						}
+
+						.container-tl.left::before,
+						.container-tl.right::before {
+							left: 100px;
+							border-color: transparent #006E51 transparent transparent;
+						}
+
+						.container-tl.left .date,
+						.container-tl.right .date {
+							right: auto;
+							left: 15px;
+						}
+
+						.container-tl.left .icon,
+						.container-tl.right .icon {
+							right: auto;
+							left: 146px;
+						}
+
+						.container-tl.left .content,
+						.container-tl.right .content {
+							padding: 30px 30px 30px 90px;
+							border-radius: 500px 0 0 500px;
+						}
+						}
+					</style>
+					<div class="timeline">
+						<div class="container-tl left">
+						  <div class="date">15 Dec</div>
+						  <i class="icon fa fa-home"></i>
+						  <div class="content">
+							<h2>Lorem ipsum dolor sit amet</h2>
+							<p>
+							  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+							</p>
+						  </div>
+						</div>
+						<div class="container-tl right">
+						  <div class="date">22 Oct</div>
+						  <i class="icon fa fa-gift"></i>
+						  <div class="content">
+							<h2>Lorem ipsum dolor sit amet</h2>
+							<p>
+							  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+							</p>
+						  </div>
+						</div>
+						<div class="container-tl left">
+						  <div class="date">10 Jul</div>
+						  <i class="icon fa fa-user"></i>
+						  <div class="content">
+							<h2>Lorem ipsum dolor sit amet</h2>
+							<p>
+							  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+							</p>
+						  </div>
+						</div>
+						<div class="container-tl right">
+							<div class="date">22 Oct</div>
+							<i class="icon fa fa-gift"></i>
+							<div class="content">
+							  <h2>Lorem ipsum dolor sit amet</h2>
+							  <p>
+								Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+							  </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- container for the projects section -->
+<div class="container-fluid full-screen-height projects-container hidden-scrollbar" id="projects">
+	<div style="display: flex; justify-content: center; padding-top: 16px; padding-bottom: 16px;">
+		<h1>Projects & Certifications</h1>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Project Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The personal project_1. The projects does blah blah blah</h4>
+					<p class="card-text">
+						<a class="fa font-info2 fa-github"></a>
+					    <hr>
+					    <h4>Languages</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Project Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The personal project_1. The projects does blah blah blah</h4>
+					<p class="card-text">
+						<a class="fa font-info2 fa-github"></a>
+					    <hr>
+					    <h4>Languages</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Project Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The personal project_1. The projects does blah blah blah</h4>
+					<p class="card-text">
+						<a class="fa font-info2 fa-github"></a>
+					    <hr>
+					    <h4>Languages</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Project Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The personal project_1. The projects does blah blah blah</h4>
+					<p class="card-text">
+						<a class="fa font-info2 fa-github"></a>
+					    <hr>
+					    <h4>Languages</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Project Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The personal project_1. The projects does blah blah blah</h4>
+					<p class="card-text">
+						<a class="fa font-info2 fa-github"></a>
+					    <hr>
+					    <h4>Languages</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Project Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The personal project_1. The projects does blah blah blah</h4>
+					<p class="card-text">
+						<a class="fa font-info2 fa-github"></a>
+					    <hr>
+					    <h4>Languages</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Certification Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The certification_1. The certification does blah blah blah</h4>
+					<p class="card-text">
+						<a href="#" class="fa font-info2 fa-certificate"></a>
+						<hr>
+						<h4>License</h4>
+						<h4>Validity</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-6">
+				<div class="card bg-secondary mb-3" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); cursor: context-menu;">
+				  <div class="card-header">[Certification Name]</div>
+				  <div class="card-body">
+					<h4 class="card-title">The certification_1. The certification does blah blah blah</h4>
+					<p class="card-text">
+						<a href="#" class="fa font-info2 fa-certificate"></a>
+						<hr>
+						<h4>License</h4>
+						<h4>Validity</h4>
+					</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- container for the skills section -->
+<div class="container-fluid full-screen-height skills-container" id="skill-set">
+  <style>
+        .warpper2{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        }
+        .tab{
+        cursor: pointer;
+        padding:20px 100px;
+        margin:0px 2px;
+        background:#04AA6D;
+        display:inline-block;
+        color:#fff;
+        border-radius:3px 3px 0px 0px;
+        box-shadow: 0 0.5rem 0.8rem #00000080;
+        }
+        .panels{
+        background:#fffffff6;
+        box-shadow: 0 2rem 2rem #00000080;
+        min-height:60vh;
+        width:100%;
+        max-width:120vh;
+        border-radius:3px;
+        overflow:hidden;
+        padding:20px;  
+        }
+        .panel{
+        display:none;
+        animation: fadein .8s;
+        }
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        .radio{
+        display:none;
+        }
+        #one:checked ~ .panels #one-panel,
+        #two:checked ~ .panels #two-panel,
+        #three:checked ~ .panels #three-panel{
+        display:block
+        }
+        #one:checked ~ .tabs #one-tab,
+        #two:checked ~ .tabs #two-tab,
+        #three:checked ~ .tabs #three-tab{
+        background:#fffffff6;
+        color:#000;
+        border-top: 3px solid #04AA6D;
+        }
+        .progressBar {
+        margin-top: 5%;
+        margin-left: 5%;
+        }
+
+        .progressBar h4 {
+        font-size: 21px;
+        font-size: 1.33em;
+        text-transform: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        margin-bottom: 7px;
+        margin-bottom: .33em;
+        color: #000;
+        text-align: left;
+        }
+
+        .progressBarContainer {
+        width: 100%;
+        max-width: 100vh;
+        height: 1.5em;
+        background: #e6eae3;
+        background: #04aa6d59;
+        overflow: hidden;
+        border-radius: 5px;
+        }
+
+        .progressBarValue {
+        height: 1.5em;
+        float: left;
+        background: #04AA6D;
+        background: #04AA6D;
+        text-align: right;
+        }
+
+        .value-00 { width: 0; }
+
+        .value-10 { width: 10%; }
+
+        .value-20 { width: 20%; }
+
+        .value-30 { width: 30%; }
+
+        .value-40 { width: 40%; }
+
+        .value-50 { width: 50%; }
+
+        .value-60 { width: 60%; }
+
+        .value-70 { width: 70%; }
+
+        .value-80 { width: 80%; }
+
+        .value-90 { width: 90%; }
+
+        .value-100 { width: 100%; }
+    </style>
+    <br>
+    <br>
+    <div class="warpper2">
+        <input class="radio" id="one" name="group" type="radio" checked>
+        <input class="radio" id="two" name="group" type="radio">
+        <div class="tabs">
+            <label class="tab" id="one-tab" for="one"><h3>Technical Skills</h3></label>
+            <label class="tab" id="two-tab" for="two"><h3>Soft Skills</h3></label>
+        </div>
+        <div class="panels" style="margin-bottom: 16px;">
+            <div class="panel" id="one-panel">
+                <div class="progressBar">
+                    <h4>HTML5</h4>
+                    <div class="progressBarContainer">
+                      <div class="progressBarValue value-90"></div>
+                    </div>
+                  </div>
+                  <div class="progressBar">
+                    <h4>HTML5</h4>
+                    <div class="progressBarContainer">
+                      <div class="progressBarValue value-50"></div>
+                    </div>
+                  </div>
+                  <div class="progressBar">
+                    <h4>HTML5</h4>
+                    <div class="progressBarContainer">
+                      <div class="progressBarValue value-70"></div>
+                    </div>
+                  </div>
+            </div>
+            <div class="panel" id="two-panel">
+                <div class="progressBar">
+                    <h4>Speaking</h4>
+                    <div class="progressBarContainer">
+                      <div class="progressBarValue value-90"></div>
+                    </div>
+                  </div>
+                  <div class="progressBar">
+                    <h4>Speaking</h4>
+                    <div class="progressBarContainer">
+                      <div class="progressBarValue value-80"></div>
+                    </div>
+                  </div>
+                  <div class="progressBar">
+                    <h4>Speaking</h4>
+                    <div class="progressBarContainer">
+                      <div class="progressBarValue value-70"></div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- container for the "get in touch" section -->
+<div class="container-fluid footer-container" id="contact-me">
+	<style>
+        .fa-code {
+        color: black;
+        }
+
+        .fa-heart {
+        color: black;
+        }
+    </style>
+    <br>
+	<br>
+	<br>
+    <h1>Get In Touch</h1>
+    <br>
+    <p>I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available,</p>
+    <p>If you have any questions, or if you just want to say hi, please feel free to email me at, <a href="mailto:ted.bhatia@gmail.com">ted.bhatia@gmail.com</a>.</p>
+    <br>
+    <h2 style="margin-bottom: 0"><a href="#" class="fa fa-code"></a> with <a href="#" class="fa fa-heart"></a> by Tejas Bhatia </h2>
+</div>
+</div>
+</body>
+</html>

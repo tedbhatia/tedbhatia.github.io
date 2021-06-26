@@ -321,11 +321,11 @@ color: black;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 /* CSS properties for the hidden scrollbar. This is done in order to remove the obviousness of the scrollbar 
- *  indicating the more content is present. Also, helps us reduce the number of visible, yet unnecessary, scrollbars in the document
+ *  indicating that more content is present. Also, helps us reduce the number of visible, yet unnecessary, scrollbars in the document
  */
 .hidden-scrollbar::-webkit-scrollbar {
 	display: none;

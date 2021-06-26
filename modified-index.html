@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tejas Bhatia - Portfolio</title>
+  <title id="title">Tejas Bhatia - Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/modified-index-styles.css">
@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/index.js"></script>
 </head>
 <body onload="computeNavbarHeight()" onresize="computeNavbarHeight()">
@@ -88,14 +89,14 @@
             z-index: 1;
             }
         </style>
-        <h1>Tejas Bhatia</h1>
+        <h1 id="homeSectionDisplayName">Tejas Bhatia</h1>
         <h2>One line description about yourself; your goal</h2>
         <br><br>
         <a href="#about" class="transparent_btn">More About Me </a>
         <br><br>
-        <a href="https://github.com/tedbhatia" class="fa font-info fa-github"></a>
-        <a href="https://www.linkedin.com/in/tejas-bhatia/" class="fa font-info fa-linkedin"></a>
-        <a href="https://twitter.com/techted6" class="fa font-info fa-twitter"></a>
+        <a class="fa font-info fa-github" id="githubProfileUrl"></a>
+        <a class="fa font-info fa-linkedin" id="linkedInProfileUrl"></a>
+        <a class="fa font-info fa-twitter" id="twitterProfileUrl"></a>
     </div>
 	<!-- Commenting out the animated boxes in the home section. Can be reintroduced with minor CSS tweaks -->
 	<ul class="bg-bubbles">
@@ -153,10 +154,7 @@
 			<div class="col-12 col-sm-12 col-md-4">
 				<div class="scroll leftpane hidden-scrollbar">
 					<h1>Bio</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-						Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-						Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p id="bioText"></p>
 				</div>
 			</div>
 			<div class="col-12 col-sm-12 col-md-8 padding-sm-xs-screens">
@@ -242,11 +240,11 @@
 						}
 
 						.container-tl.left .date {
-						right: -75px;
+						right: -125px;
 						}
 
 						.container-tl.right .date {
-						left: -75px;
+						left: -125px;
 						}
 
 						.container-tl .icon {
@@ -344,47 +342,7 @@
 						}
 						}
 					</style>
-					<div class="timeline">
-						<div class="container-tl left">
-						  <div class="date">15 Dec</div>
-						  <i class="icon fa fa-home"></i>
-						  <div class="content">
-							<h2>Lorem ipsum dolor sit amet</h2>
-							<p>
-							  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-							</p>
-						  </div>
-						</div>
-						<div class="container-tl right">
-						  <div class="date">22 Oct</div>
-						  <i class="icon fa fa-gift"></i>
-						  <div class="content">
-							<h2>Lorem ipsum dolor sit amet</h2>
-							<p>
-							  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-							</p>
-						  </div>
-						</div>
-						<div class="container-tl left">
-						  <div class="date">10 Jul</div>
-						  <i class="icon fa fa-user"></i>
-						  <div class="content">
-							<h2>Lorem ipsum dolor sit amet</h2>
-							<p>
-							  Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-							</p>
-						  </div>
-						</div>
-						<div class="container-tl right">
-							<div class="date">22 Oct</div>
-							<i class="icon fa fa-gift"></i>
-							<div class="content">
-							  <h2>Lorem ipsum dolor sit amet</h2>
-							  <p>
-								Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
-							  </p>
-							</div>
-						</div>
+					<div class="timeline" id="timelineContainerDiv">
 					</div>
 				</div>
 			</div>
@@ -529,10 +487,11 @@
         background:#fffffff6;
         box-shadow: 0 2rem 2rem #00000080;
         min-height:60vh;
+		height:60vh;
         width:100%;
         max-width:120vh;
         border-radius:3px;
-        overflow:hidden;
+        overflow:auto;
         padding:20px;  
         }
         .panel{
@@ -628,46 +587,10 @@
             <label class="tab" id="one-tab" for="one"><h3>Technical Skills</h3></label>
             <label class="tab" id="two-tab" for="two"><h3>Soft Skills</h3></label>
         </div>
-        <div class="panels" style="margin-bottom: 16px;">
+        <div class="panels hidden-scrollbar" style="margin-bottom: 16px;">
             <div class="panel" id="one-panel">
-                <div class="progressBar">
-                    <h4>HTML5</h4>
-                    <div class="progressBarContainer">
-                      <div class="progressBarValue value-90"></div>
-                    </div>
-                  </div>
-                  <div class="progressBar">
-                    <h4>HTML5</h4>
-                    <div class="progressBarContainer">
-                      <div class="progressBarValue value-50"></div>
-                    </div>
-                  </div>
-                  <div class="progressBar">
-                    <h4>HTML5</h4>
-                    <div class="progressBarContainer">
-                      <div class="progressBarValue value-70"></div>
-                    </div>
-                  </div>
             </div>
             <div class="panel" id="two-panel">
-                <div class="progressBar">
-                    <h4>Speaking</h4>
-                    <div class="progressBarContainer">
-                      <div class="progressBarValue value-90"></div>
-                    </div>
-                  </div>
-                  <div class="progressBar">
-                    <h4>Speaking</h4>
-                    <div class="progressBarContainer">
-                      <div class="progressBarValue value-80"></div>
-                    </div>
-                  </div>
-                  <div class="progressBar">
-                    <h4>Speaking</h4>
-                    <div class="progressBarContainer">
-                      <div class="progressBarValue value-70"></div>
-                    </div>
-                  </div>
             </div>
         </div>
     </div>
